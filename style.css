@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root{
   --blue: rgb(25,146,212);
-  --yellow: yellow;
-  --bg:rgb(226,232,240);
-  --lite-text: gray;
-  --dark-text: rgb(79, 78, 78);
+  --yellow: rgb(255,198,0);
+  --bg:#dadada;
+  --lite-text: hsl(0, 2%, 12%);
+  --dark-text: rgb(1, 0, 0);
   --box-shadow: 
 }
 
@@ -13,36 +15,47 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    /* border: 1px solid red; */
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 h2, h3, h4, h5{
   color: var(--dark-text);
 }
-h2{
+h1{
   font-size: 2rem;
 }
-h3{
-  font-size: 1.7rem;
+h2{
+  font-size: 1.8rem;
 }
-h4{
+h3{
   font-size: 1.5rem;
 }
+h4{
+  font-size: 1.25rem;
+}
 h5{
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 p{
   color: var(--lite-text);
+  line-height: 1.5;
 }
 .container{
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns:  repeat(5, 1fr);
-  grid-template-areas: "side head head head head"
-                       "side main main main main"; 
+  grid-template-columns:   15% repeat(4, 1fr);
+  grid-template-areas: "sidebar head head head head"
+                       "sidebar main main main main"; 
 }
+
 .sidebar{
-  grid-area: side;
+  grid-area: sidebar;
   background-color: var(--blue);
   padding: 2em;
 }
@@ -50,13 +63,11 @@ ul{
   list-style: none;
   padding: 0 !important;
   margin: 2rem 0 !important;
-  padding: 1rem .5rem;
-  
+  padding: 1rem .5rem; 
 }
 .sidebar i{
   color: white;
   transform: scale(1.2);
-  
 }
 .link{
   text-decoration: none;
@@ -65,30 +76,30 @@ ul{
   display: inline-block;
   padding: .5rem 1rem;
 }
+
 .header{
   grid-area: head;
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1em;
+  padding: 1em 3rem;
 }
 .header-top{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-top-right, .header-top-left{
+.header-top-left{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: .5rem 3rem;
 }
 .header-top i{
-  transform: scale(1.8);
-  color: darkgray;
+  transform: scale(1.5);
+  color: var(--dark-text);
 }
 .input{
-  width: 30rem;
+  width: 50rem;
   background-color: var(--bg);
   height: 2rem;
   border: none;
@@ -96,19 +107,23 @@ ul{
   margin-left: 1.5rem;
  }
 .header-top-right{
-  width: 30%;
+  width: 20%;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .profile{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .profile i{
-  color: white;
-  transform: scale(2.2);
+  color: var(--blue);
+  transform: scale(1.7);
 }
 .profile1{
   background-color: var(--yellow);
@@ -117,25 +132,28 @@ ul{
   display: flex;
   justify-content: space-between;
   margin: 0 1.5rem;
+  padding-top: 1rem;
 }
 .header-bottom-right{
-  width: 90%;
+  width: 95%;
   margin-left: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.greeting p{
+  font-weight: bolder;
+}
 .header-bottom .profile{
-  width: 6rem;
-  height: 6rem;
+  width: 4.5rem;
+  height: 4.5rem;
   align-self: center;
 }
 .header-bottom .profile i{
-  transform: scale(3.5);
+  transform: scale(2.5);
 }
-
 .btn{
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   background-color: var(--blue);
   font-size: 1.2rem;
   font-weight: 500;
@@ -145,47 +163,45 @@ ul{
   padding: .7rem 2.5rem;
 }
 .main{
-  background-color: var(--bg);
   grid-area: main;
-  padding: 2em;
+
+  padding: 1.5rem 3rem;
+  background-color: var(--bg);
+  
   display: grid;
-  grid-template-columns: 40% 40% 20%;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(2, minmax(150px, 500px)) 25%;
   grid-template-areas: "project-title . announce-title"
-                       "project project announce"
-                       "project project announce"
-                       "project project announce"
-                       "project project announce"
-                       "project project trend-title"
-                       "project project trend"
-                       "project project trend"
-                       "project project trend"
-                       "project project trend";
-  grid-gap: .5rem;
+                        "projects projects announcements"
+                        "projects projects trend-title"
+                        "projects projects trending";
+  
+  
 }
+
 .project-title{
   grid-area: project-title;
   align-self: end;
 }
 .projects{
-  grid-area: project;
-  
+  grid-area: projects;
+  justify-self: stretch;
   display: grid;
-  grid-gap: 2em;
-  padding-right: 2em;
-  grid-template-columns: repeat(2, 1fr);
-  
-  
+  grid-template-columns: repeat(2, minmax(150px, 350px));
+  grid-gap: 3em;
+
 }
 .project{
-  
-  max-width: 400px;
-  padding: 2em 1em 1em 1em;
+  padding: 2em;
   background-color: white;
   border-radius: 10px;
   border-left: .7em solid var(--yellow);
-  display: flex;
-  flex-direction: column;
-  
+  display: grid;
+  grid-template-rows: repeat(2, min-content) 1fr;
+}
+.project p{
+  max-width: 90%;
+  margin-top: 1rem;
 }
 .icons{
   text-align: right;
@@ -201,31 +217,35 @@ ul{
 
 .announce-title{
   grid-area: announce-title;
-  
+  align-self: end;
 
 }
 .announcements{
-  grid-area: announce;
+  grid-area: announcements;
   background-color:white;
-  padding: 1.5rem;
+  padding: 3rem;
   border-radius: 10px;
+}
+.notice p{
+  font-size: .8rem;
+  padding-top: .3rem;
+  padding-bottom: 1rem;
 }
 .announcements div:not(:last-of-type)::after{
   content: '';
-  
   width: 100%;
   height: .5em;
+  padding-bottom: .7rem;
   display: inline-block;
-
   border-top: 1px solid lightgray;
-
 }
 .trend-title{
   grid-area: trend-title;
-  padding-top: 2em;
+  align-self: end;
+  margin-top: 3rem;
 }
 .trending{
-  grid-area: trend;
+  grid-area: trending;
   background-color: white;
   border-radius: 10px;
   
@@ -234,7 +254,7 @@ ul{
   display: flex;
   align-items: center;
   margin:1.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .user-handle{
   padding-left: 1.2rem;
@@ -243,20 +263,20 @@ ul{
   color: darkgray;
 }
 .profile2{
-  background-color: var(--bg);
+  background-color: lightblue;
 }
 .profile2 i{
-  color: orange;
+  color: rgb(181, 96, 110);
 }
 .profile3{
   background-color: darkgray;
 }
 .profile3 i{
-  color: green;
+  color: orange;
 }
 .profile4{
   background-color: pink;
 }
 .profile4 i{
-  color: purple;
+  color: green;
 }
