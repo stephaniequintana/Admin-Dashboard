@@ -1,0 +1,262 @@
+:root{
+  --blue: rgb(25,146,212);
+  --yellow: yellow;
+  --bg:rgb(226,232,240);
+  --lite-text: gray;
+  --dark-text: rgb(79, 78, 78);
+  --box-shadow: 
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* border: 1px solid red; */
+}
+h2, h3, h4, h5{
+  color: var(--dark-text);
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.7rem;
+}
+h4{
+  font-size: 1.5rem;
+}
+h5{
+  font-size: 1.2rem;
+}
+p{
+  color: var(--lite-text);
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns:  repeat(5, 1fr);
+  grid-template-areas: "side head head head head"
+                       "side main main main main"; 
+}
+.sidebar{
+  grid-area: side;
+  background-color: var(--blue);
+  padding: 2em;
+}
+ul{
+  list-style: none;
+  padding: 0 !important;
+  margin: 2rem 0 !important;
+  padding: 1rem .5rem;
+  
+}
+.sidebar i{
+  color: white;
+  transform: scale(1.2);
+  
+}
+.link{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  display: inline-block;
+  padding: .5rem 1rem;
+}
+.header{
+  grid-area: head;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+.header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-top-right, .header-top-left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 3rem;
+}
+.header-top i{
+  transform: scale(1.8);
+  color: darkgray;
+}
+.input{
+  width: 30rem;
+  background-color: var(--bg);
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+ }
+.header-top-right{
+  width: 30%;
+}
+.profile{
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile i{
+  color: white;
+  transform: scale(2.2);
+}
+.profile1{
+  background-color: var(--yellow);
+}
+.header-bottom{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+}
+.header-bottom-right{
+  width: 90%;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-bottom .profile{
+  width: 6rem;
+  height: 6rem;
+  align-self: center;
+}
+.header-bottom .profile i{
+  transform: scale(3.5);
+}
+
+.btn{
+  margin-right: 1rem;
+  background-color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 3rem;
+  padding: .7rem 2.5rem;
+}
+.main{
+  background-color: var(--bg);
+  grid-area: main;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  grid-template-areas: "project-title . announce-title"
+                       "project project announce"
+                       "project project announce"
+                       "project project announce"
+                       "project project announce"
+                       "project project trend-title"
+                       "project project trend"
+                       "project project trend"
+                       "project project trend"
+                       "project project trend";
+  grid-gap: .5rem;
+}
+.project-title{
+  grid-area: project-title;
+  align-self: end;
+}
+.projects{
+  grid-area: project;
+  
+  display: grid;
+  grid-gap: 2em;
+  padding-right: 2em;
+  grid-template-columns: repeat(2, 1fr);
+  
+  
+}
+.project{
+  
+  max-width: 400px;
+  padding: 2em 1em 1em 1em;
+  background-color: white;
+  border-radius: 10px;
+  border-left: .7em solid var(--yellow);
+  display: flex;
+  flex-direction: column;
+  
+}
+.icons{
+  text-align: right;
+  align-self: end;
+  justify-self: end;
+}
+.project-icon{
+  display: inline-block;
+  padding-right: 1rem;
+  transform: scale(1.3);
+  color: var(--dark-text);
+}
+
+.announce-title{
+  grid-area: announce-title;
+  
+
+}
+.announcements{
+  grid-area: announce;
+  background-color:white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.announcements div:not(:last-of-type)::after{
+  content: '';
+  
+  width: 100%;
+  height: .5em;
+  display: inline-block;
+
+  border-top: 1px solid lightgray;
+
+}
+.trend-title{
+  grid-area: trend-title;
+  padding-top: 2em;
+}
+.trending{
+  grid-area: trend;
+  background-color: white;
+  border-radius: 10px;
+  
+}
+.user{
+  display: flex;
+  align-items: center;
+  margin:1.5rem;
+  font-size: 1.2rem;
+}
+.user-handle{
+  padding-left: 1.2rem;
+}
+.user-handle p:last-child{
+  color: darkgray;
+}
+.profile2{
+  background-color: var(--bg);
+}
+.profile2 i{
+  color: orange;
+}
+.profile3{
+  background-color: darkgray;
+}
+.profile3 i{
+  color: green;
+}
+.profile4{
+  background-color: pink;
+}
+.profile4 i{
+  color: purple;
+}
