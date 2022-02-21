@@ -11,9 +11,9 @@ ___
 ___
 ## Design Plan
 - The first phase of the project entails setting up the project and layout:
-    * Setting up your HTML and CSS with some simple dummy content.
-    * Applying Grid properties for the basic layout.
-    * Taking each section at a time targeting nested elements into Grid cells or Flexbox containers.
+    Setting up your HTML and CSS with some simple dummy content.
+    Applying Grid properties for the basic layout.
+    Taking each section at a time targeting nested elements into Grid cells or Flexbox containers.
 ___
 ## Challenges Encountered and Knowledge Gained
 * The ease of CSS variables is by far more convenient for updating overall styling.
@@ -38,9 +38,9 @@ ___
             grid-gap: 1.5em;
             grid-template-columns: repeat(2, minmax(150px, 500px)) 25%;
             grid-template-areas: "project-title . announce-title"
-                                    "projects projects announcements"
-                                    "projects projects trend-title"
-                                    "projects projects trending";
+                                 "projects projects announcements"
+                                 "projects projects trend-title"
+                                 "projects projects trending";
         }
     ```
 ## Languages
