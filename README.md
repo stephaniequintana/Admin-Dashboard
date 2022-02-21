@@ -1,7 +1,8 @@
 # Admin Dashboard
 > This is the final project from **The Odin Project's** [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css) course. The major focus is layout design, incorporating nested grids and utilizing flexbox where beneficial. This is an all encompassing challenge and can be found [here](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/admin-dashboard) should you like to try it out for yourself.
 <!-- > Live demo [_here_](https://www.example.com). If you have the project hosted somewhere, include the link here. -->
-
+___
+![image](https://user-images.githubusercontent.com/81270711/154956398-7e6531dc-7068-4d7d-9fb4-87f68b229230.png)
 ___
 ## Table of Contents
 * [Design Plan](#design-plan)
