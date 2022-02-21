@@ -1,4 +1,6 @@
 # Admin Dashboard
+___
+The live site can be found [here](https://stephaniequintana.github.io/Admin-Dashboard/)
 > This is the final project from **The Odin Project's** [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css) course. The major focus is layout design, incorporating nested grids and utilizing flexbox where beneficial. This is an all encompassing challenge and can be found [here](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/admin-dashboard) should you like to try it out for yourself.
 <!-- > Live demo [_here_](https://www.example.com). If you have the project hosted somewhere, include the link here. -->
 ___
